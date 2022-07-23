@@ -18,22 +18,22 @@ def talk(text):
 
 def take_command():
     try:
-        talk('hey Rohit, Titu here')
+        talk('hey Rohit, chinky here')
         talk('how can i help you')
         with sr.Microphone() as source:
             print("listining....")
             voice = listener.listen(source)
 
             command = listener.recognize_google(voice)
-            if "Titu" in command:
-                command = command.replace('Titu',' ')
+            if "chinky" in command:
+                command = command.replace('chinky',' ')
                 print(command)
     except:
         pass
     return command
 
 
-def run_titu():
+def run_chinky():
     command = take_command()
     print(command)
     if "play"in command:
@@ -56,4 +56,4 @@ def run_titu():
 
 
 while True:
-    run_titu()
+    run_chinky()
